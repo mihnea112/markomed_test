@@ -1,11 +1,10 @@
-
-import React, { useEffect } from 'react';
-import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
-import AboutUs from './pages/AboutUs';
-import Suppliers from './pages/Suppliers';
+import About from './pages/About';
+import Partners from './pages/Partners';
 import Catalog from './pages/Catalog';
 import ProductDetail from './pages/ProductDetail';
 
@@ -19,24 +18,35 @@ const ScrollToTop = () => {
 };
 
 const App: React.FC = () => {
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [darkMode]);
+
+  const toggleDarkMode = () => setDarkMode(!darkMode);
+
   return (
-    <Router>
+    <HashRouter>
       <ScrollToTop />
-      <div className="min-h-screen flex flex-col selection:bg-primary selection:text-white">
-        <Navbar />
-        <main className="flex-1">
+      <div className="min-h-screen flex flex-col font-sans">
+        <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+        <div className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/despre-noi" element={<AboutUs />} />
-            <Route path="/furnizori" element={<Suppliers />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/partners" element={<Partners />} />
             <Route path="/catalog" element={<Catalog />} />
             <Route path="/product/:id" element={<ProductDetail />} />
-            <Route path="/contact" element={<Home />} /> {/* Placeholder */}
           </Routes>
-        </main>
+        </div>
         <Footer />
       </div>
-    </Router>
+    </HashRouter>
   );
 };
 

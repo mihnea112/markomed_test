@@ -1,9 +1,4 @@
-
 {
-  "name": "MARKO MED - Medical Laser Technology",
-  "description": "A premium web platform for a leading distributor of medical laser technology, featuring product catalogs, supplier partnerships, and an AI-powered technical advisor.",
-  "requestFramePermissions": [
-    "camera",
-    "microphone"
-  ]
+  "name": "MARKO MED - Medical Technology",
+  "description": "A premium medical equipment distributor application featuring product catalogs, partner showcases, and detailed product specifications."
 }
