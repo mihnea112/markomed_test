@@ -32,7 +32,7 @@ const Home: React.FC = () => {
           <div className="mb-12 animate-fade-in-up">
             <div className="inline-flex items-center justify-center rounded-3xl bg-white/15 backdrop-blur-md border border-white/30 shadow-2xl shadow-black/40 p-8 ring-1 ring-white/20">
               <img
-                src="/logo.png"
+                src="/logo_white.png"
                 alt="Marko Med Logo"
                 className="w-72 md:w-[26rem] lg:w-[30rem] h-auto drop-shadow-[0_10px_30px_rgba(0,0,0,0.55)]"
               />
