@@ -10,11 +10,14 @@ const Footer: React.FC = () => {
           
           {/* Brand Column */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2 mb-4">
-               <div className="flex items-center justify-center h-8 w-8 bg-primary rounded shadow-sm text-white font-bold text-xl">
-                M
-              </div>
-              <span className="text-xl font-bold tracking-widest ml-2">MARKO MED</span>
+            <div className="flex items-center gap-3 mb-4">
+              <img
+                src="/logo_white.png"
+                alt="MARKOMED logo"
+                className="h-8 w-auto"
+                loading="lazy"
+              />
+              <span className="text-xl font-bold tracking-widest">MARKO MED</span>
             </div>
             <p className="text-gray-400 text-sm">
               Partenerul tău de încredere în tehnologie medicală de avangardă.
@@ -38,15 +41,15 @@ const Footer: React.FC = () => {
             <ul className="space-y-3 text-sm text-gray-400">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="mt-0.5 text-primary" />
-                <span>Strada Exemplului Nr. 10,<br/>București, România</span>
+                <span>Strada I. Văcărescu, Nr. 19, ap. 4,<br/>300182 Timișoara, România</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-primary" />
-                <span>+40 700 000 000</span>
+                <a href="tel:+40729991663" className="hover:text-white transition-colors">0729 991 663</a>
               </li>
               <li className="flex items-center gap-3">
                  <Mail size={18} className="text-primary" />
-                <span>office@markomed.ro</span>
+                <a href="mailto:office@markomed.ro" className="hover:text-white transition-colors">office@markomed.ro</a>
               </li>
             </ul>
           </div>
@@ -70,7 +73,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
-          <p>© 2023 MARKO MED. Toate drepturile rezervate.</p>
+          <p>© {new Date().getFullYear()} MARKO MED. Toate drepturile rezervate.</p>
           <div className="flex gap-6 mt-4 md:mt-0 items-center">
             <a href="#" className="hover:text-white">Termeni și condiții</a>
             <a href="#" className="hover:text-white">Politica de confidențialitate</a>

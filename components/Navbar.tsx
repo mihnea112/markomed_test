@@ -26,7 +26,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
             <Link to="/about" className={`${isActive('/about')} py-2`}>Despre Noi</Link>
             <Link to="/catalog" className={`${isActive('/catalog')} py-2`}>Produse</Link>
             <Link to="/partners" className={`${isActive('/partners')} py-2`}>Furnizori</Link>
-            <Link to="/contact" className="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors">Contact</Link>
+            <Link to="/contact" className={`${isActive('/contact')} py-2`}>Contact</Link>
           </div>
 
           {/* Mobile Menu Button - Logo removed */}
